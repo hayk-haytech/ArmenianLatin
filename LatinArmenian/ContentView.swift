@@ -8,10 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var username: String = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TextField(
+            "User name (email address)",
+            text: $username
+        )
+
+        Text(username)
+        
+        Text(String(isKeyboardEnabled()))
     }
+    
+    func isKeyboardEnabled() -> Bool {
+        guard let keyboards = UserDefaults.standard.object(forKey: "AppleKeyboards") as? [String] else {
+            return false
+        }
+        return keyboards.contains("haytech.LatinArmenian.LatinArmenianKeyboard")
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

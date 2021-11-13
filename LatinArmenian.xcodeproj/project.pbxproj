@@ -11,7 +11,34 @@
 		CE7504F42739E40000C45AF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7504F32739E40000C45AF9 /* ContentView.swift */; };
 		CE7504F62739E40100C45AF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7504F52739E40100C45AF9 /* Assets.xcassets */; };
 		CE7504F92739E40100C45AF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7504F82739E40100C45AF9 /* Preview Assets.xcassets */; };
+		CE7505062739E41000C45AF9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7505052739E41000C45AF9 /* KeyboardViewController.swift */; };
+		CE75050A2739E41000C45AF9 /* LatinArmenianKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE7505032739E41000C45AF9 /* LatinArmenianKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE750513273FC7E100C45AF9 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE750512273FC7E100C45AF9 /* KeyboardKit */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE7505082739E41000C45AF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7504E62739E40000C45AF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE7505022739E41000C45AF9;
+			remoteInfo = LatinArmenianKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE75050E2739E41000C45AF9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE75050A2739E41000C45AF9 /* LatinArmenianKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE7504EE2739E40000C45AF9 /* LatinArmenian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LatinArmenian.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +46,9 @@
 		CE7504F32739E40000C45AF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE7504F52739E40100C45AF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE7504F82739E40100C45AF9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE7505032739E41000C45AF9 /* LatinArmenianKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LatinArmenianKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7505052739E41000C45AF9 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		CE7505072739E41000C45AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +59,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE7505002739E41000C45AF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE750513273FC7E100C45AF9 /* KeyboardKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7504F02739E40000C45AF9 /* LatinArmenian */,
+				CE7505042739E41000C45AF9 /* LatinArmenianKeyboard */,
 				CE7504EF2739E40000C45AF9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7504EE2739E40000C45AF9 /* LatinArmenian.app */,
+				CE7505032739E41000C45AF9 /* LatinArmenianKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +107,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CE7505042739E41000C45AF9 /* LatinArmenianKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CE7505052739E41000C45AF9 /* KeyboardViewController.swift */,
+				CE7505072739E41000C45AF9 /* Info.plist */,
+			);
+			path = LatinArmenianKeyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +126,37 @@
 				CE7504EA2739E40000C45AF9 /* Sources */,
 				CE7504EB2739E40000C45AF9 /* Frameworks */,
 				CE7504EC2739E40000C45AF9 /* Resources */,
+				CE75050E2739E41000C45AF9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE7505092739E41000C45AF9 /* PBXTargetDependency */,
 			);
 			name = LatinArmenian;
 			productName = LatinArmenian;
 			productReference = CE7504EE2739E40000C45AF9 /* LatinArmenian.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CE7505022739E41000C45AF9 /* LatinArmenianKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE75050B2739E41000C45AF9 /* Build configuration list for PBXNativeTarget "LatinArmenianKeyboard" */;
+			buildPhases = (
+				CE7504FF2739E41000C45AF9 /* Sources */,
+				CE7505002739E41000C45AF9 /* Frameworks */,
+				CE7505012739E41000C45AF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LatinArmenianKeyboard;
+			packageProductDependencies = (
+				CE750512273FC7E100C45AF9 /* KeyboardKit */,
+			);
+			productName = LatinArmenianKeyboard;
+			productReference = CE7505032739E41000C45AF9 /* LatinArmenianKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +171,9 @@
 					CE7504ED2739E40000C45AF9 = {
 						CreatedOnToolsVersion = 13.1;
 					};
+					CE7505022739E41000C45AF9 = {
+						CreatedOnToolsVersion = 13.1;
+					};
 				};
 			};
 			buildConfigurationList = CE7504E92739E40000C45AF9 /* Build configuration list for PBXProject "LatinArmenian" */;
@@ -111,11 +185,15 @@
 				Base,
 			);
 			mainGroup = CE7504E52739E40000C45AF9;
+			packageReferences = (
+				CE750511273FC7E100C45AF9 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+			);
 			productRefGroup = CE7504EF2739E40000C45AF9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				CE7504ED2739E40000C45AF9 /* LatinArmenian */,
+				CE7505022739E41000C45AF9 /* LatinArmenianKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +205,13 @@
 			files = (
 				CE7504F92739E40100C45AF9 /* Preview Assets.xcassets in Resources */,
 				CE7504F62739E40100C45AF9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7505012739E41000C45AF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +227,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE7504FF2739E41000C45AF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7505062739E41000C45AF9 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE7505092739E41000C45AF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE7505022739E41000C45AF9 /* LatinArmenianKeyboard */;
+			targetProxy = CE7505082739E41000C45AF9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CE7504FA2739E40100C45AF9 /* Debug */ = {
@@ -264,6 +365,7 @@
 		CE7504FD2739E40100C45AF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -282,7 +384,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = be.haytech.LatinArmenian;
+				PRODUCT_BUNDLE_IDENTIFIER = haytech.LatinArmenian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -293,6 +395,7 @@
 		CE7504FE2739E40100C45AF9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,8 +414,58 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = be.haytech.LatinArmenian;
+				PRODUCT_BUNDLE_IDENTIFIER = haytech.LatinArmenian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE75050C2739E41000C45AF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NNSD227X72;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LatinArmenianKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LatinArmenianKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = haytech.LatinArmenian.LatinArmenianKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE75050D2739E41000C45AF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NNSD227X72;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LatinArmenianKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LatinArmenianKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = haytech.LatinArmenian.LatinArmenianKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -340,7 +493,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		CE75050B2739E41000C45AF9 /* Build configuration list for PBXNativeTarget "LatinArmenianKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE75050C2739E41000C45AF9 /* Debug */,
+				CE75050D2739E41000C45AF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE750511273FC7E100C45AF9 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE750512273FC7E100C45AF9 /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE750511273FC7E100C45AF9 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE7504E62739E40000C45AF9 /* Project object */;
 }
